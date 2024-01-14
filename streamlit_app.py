@@ -54,9 +54,9 @@ def update(sequence=txt):
     
 
     st.download_button(
-        label="Download PDB",
+        label="Download PDB File",
         data=pdb_string,
-        file_name='predicted.pdb',
+        file_name='predicted-protein-PDB.pdb',
         mime='text/plain',
     )
 
