@@ -66,4 +66,4 @@ if not predict:
     st.warning('👈 Enter protein sequence data!')
 
 
-st.sidebar.write('[*ESMFold*](https://esmatlas.com/about) is an end-to-end single sequence protein structure predictor based on the ESM-2 language model. The model and this app is based on Meta AI & ESMfold. For more information regarding the research, please follow the [research article](https://www.biorxiv.org/content/10.1101/2022.07.20.500902v2).')
+st.sidebar.write('[*ESMFold*](https://esmatlas.com/about) is an end-to-end single sequence protein structure predictor based on the ESM-2 language model. The model and this app is based on Meta AI ESMfold. For more information, please follow the [metaAi](https://ai.meta.com/blog/protein-folding-esmfold-metagenomics/).')
