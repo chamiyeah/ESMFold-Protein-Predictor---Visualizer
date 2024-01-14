@@ -5,6 +5,12 @@ import py3Dmol
 import requests
 import biotite.structure.io as bsio
 
+st.set_page_config(
+    page_title="ESMFold Protein Structure Predictor",
+    page_icon="🧬",
+    layout="wide",
+)
+
 # Homebutton
 if st.sidebar.button('Home'):
     st.markdown('<meta http-equiv="refresh" content="0;URL=https://cloud.wijerathne.com">', unsafe_allow_html=True)
@@ -23,6 +29,7 @@ def render_mol(pdb):
     pdbview.zoom(2, 800)
     pdbview.spin(True)
     showmol(pdbview, height = 500,width=800)
+    
 
 # Protein sequence input
 DEFAULT_SEQ = "MGSSHHHHHHSQDLMVTSTYIPMSQRRSWADVKPIMQDDGPNPVVPIMYSEEYKDAMDYFRAIAAKEEKSERALELTEIIVRMNPAHYTVWQYRFSLLTSLNKSLEDELRLMNEFAVQNLKSYQVWHHRLLLLDRISPQDPVSEIEYIHGSLLPDPKNYHTWAYLHWLYSHFSTLGRISEAQWGSELDWCNEMLRVDGRNNSAWGWRWYLRVSRPGAETSSRSLQDELIYILKSIHLIPHNVSAWNYLRGFLKHFSLPLVPILPAILPYTASKLNPDIETVEAFGFPMPSDPLPEDTPLPVPLALEYLADSFIEQNRVDDAAKVFEKLSSEYDQMRAGYWEFRRRECAE "
