@@ -6,10 +6,19 @@ import requests
 import biotite.structure.io as bsio
 
 st.set_page_config(
-    page_title="ESMFold Protein Structure Predictor",
-    page_icon="🧬",
-    layout="wide",
+page_title="ESMFold Protein Structure Predictor",
+page_icon="🧬",
+layout="wide",
 )
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+
 
 # Homebutton
 if st.sidebar.button('Home'):
@@ -26,7 +35,7 @@ def render_mol(pdb):
     pdbview.setStyle({'cartoon':{'color':'spectrum'}})
     pdbview.setBackgroundColor('white')#('0xeeeeee')
     pdbview.zoomTo()
-    pdbview.zoom(2, 800)
+    pdbview.zoom(1.3, 800)
     pdbview.spin(True)
     showmol(pdbview, height = 500,width=800)
     
@@ -53,7 +62,7 @@ def update(sequence=txt):
 
     # Display protein structure
     st.subheader(':orange[Predicted Protein Structure]')
-    st.write('Predictions are coloured from :red[red] (worst) to :blue[blue] (best) according to pLDDT values.')
+    st.write('Click and Hold to rotate & Use :orange[Ctrl + Scroll] to Zoom in and out.')
     render_mol(pdb_string)
    
 
@@ -74,7 +83,7 @@ def update(sequence=txt):
 predict = st.sidebar.button('Predict', on_click=update)
 
 if not predict:
-    st.warning('👈 Enter protein sequence data!')
+    st.warning('⬅️ Enter protein sequence data from the menu!')
 
 
 
