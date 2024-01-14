@@ -39,7 +39,6 @@ jobs:
         with:
           name: python-app
           path: |
-            src
             release.zip
             !venv/
 
