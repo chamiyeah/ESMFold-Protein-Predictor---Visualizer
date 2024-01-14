@@ -5,6 +5,10 @@ import py3Dmol
 import requests
 import biotite.structure.io as bsio
 
+# Homebutton
+if st.sidebar.button('Home'):
+    st.markdown('<meta http-equiv="refresh" content="0;URL=https://cloud.wijerathne.com">', unsafe_allow_html=True)
+
 #st.set_page_config(layout = 'wide')
 st.sidebar.title(':rainbow[ESMFold] - :orange[Protein Predictor]')
 st.sidebar.subheader(':gray[Evolutionary-scale prediction of atomic-level protein structure with a language model]')
@@ -64,6 +68,7 @@ predict = st.sidebar.button('Predict', on_click=update)
 
 if not predict:
     st.warning('👈 Enter protein sequence data!')
+
 
 
 st.sidebar.write('[*ESMFold*](https://esmatlas.com/about) is an end-to-end single sequence protein structure predictor based on the ESM-2 language model. The model and this app is based on Meta AI ESMfold. For more information, please follow the [metaAi](https://ai.meta.com/blog/protein-folding-esmfold-metagenomics/).')
