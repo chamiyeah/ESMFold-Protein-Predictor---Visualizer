@@ -67,7 +67,8 @@ def update(sequence=txt):
    
 
     # plDDT value is stored in the B-factor field
-    st.subheader('Per-residue confidence score (pLDDT)', divider='rainbow')
+    st.subheader(f'Per-residue confidence score (pLDDT): {b_value}')
+    st.subheader('' ,divider='rainbow')
     percentage_value = round(b_value * 100, 2)
     st.info(f'plDDT: {percentage_value}%')
     st.write('plDDT is a per-residue estimate of the confidence in prediction on a scale from 0-100. Values greater than 90 indicating high confidence, and values below 50 indicating low confidence.')
@@ -80,10 +81,15 @@ def update(sequence=txt):
         mime='text/plain',
     )
 
+# Homebutton
+if st.button('Back to Home'):
+    st.markdown('<meta http-equiv="refresh" content="0;URL=https://cloud.wijerathne.com">', unsafe_allow_html=True)
+
+
 predict = st.sidebar.button('Predict', on_click=update)
 
 if not predict:
-    st.warning('⬅️ Enter protein sequence data from the menu!')
+    st.warning('⬅️ 🧬 Enter the protein sequence data from the menu!')
 
 
 
