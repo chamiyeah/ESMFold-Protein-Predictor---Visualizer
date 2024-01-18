@@ -1,5 +1,7 @@
 # ESMFold - Evolutionary-scale Prediction of Atomic-level Protein Structure with a Language Model
 
+## [🧬 LIVE APP](https://esmfold.azurewebsites.net/)
+
 ## Overview
 
 ESMFold is a Python-based application designed for predicting protein structures using the ESMFold model. This model is an end-to-end single sequence protein structure predictor built on the ESM-2 language model. The code in this repository is inspired by the works of the MetaAI ESM project.
@@ -45,3 +47,4 @@ streamlit run esmfold_app.py
 ## Additional Information
 
   The ESMFold model is an end-to-end single sequence protein structure predictor based on the ESM-2 language model. The model and this app are inspired by the Meta AI ESMfold. For more information, refer to Meta AI's blog post.
+
